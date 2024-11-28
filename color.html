@@ -1,208 +1,444 @@
-
 <!DOCTYPE html>
+
 <html lang="vi">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Bảng tên màu CSS</title>
+
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #f4f4f9, #e8ecfc);
-      color: #333;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
+    * {
+
+      box-sizing: border-box;
+
     }
 
-    h1 {
+    body {
+
+      font-family: 'Arial', sans-serif;
+
+      background: linear-gradient(135deg, #f4f4f9, #e8ecfc);
+
+      color: #333;
+
+      margin: 0;
+
+      padding: 0;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+    }
+
+    .title-container {
+
       text-align: center;
+
       margin: 20px 0;
-      font-size: 2rem;
+
+      padding: 15px 20px;
+
+      border: 2px solid #6c63ff;
+
+      border-radius: 12px;
+
+      background-color: #fff;
+
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+
       color: #4a4a4a;
+
+      max-width: 90%;
+
+    }
+
+    .title-container h1 {
+
+      font-size: 2rem;
+
+      margin: 0;
+
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .table-container {
+
+      width: 100%;
+
+      max-width: 100%;
+
+      overflow-x: auto;
+
+      margin: 20px auto;
+
+      padding: 20px;
+
+      border: 3px solid #6c63ff;
+
+      border-radius: 12px;
+
+      background-color: #fff;
+
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+
     }
 
     table {
+
       width: 100%;
-      max-width: 900px;
-      margin: 20px auto;
+
       border-collapse: collapse;
+
+      margin: 10px 0;
+
       background-color: #fff;
+
       border-radius: 12px;
+
       overflow: hidden;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+
+      table-layout: fixed;
+
     }
 
     th, td {
+
       padding: 15px;
+
       text-align: center;
+
       font-size: 1rem;
+
       transition: all 0.3s ease;
+
       border: 1px solid #ddd;
+
+      word-wrap: break-word;
+
     }
 
     th {
+
       background-color: #6c63ff;
+
       color: #fff;
+
       font-weight: bold;
+
     }
 
     td {
+
       background-color: #fafafa;
+
     }
 
     td:last-child {
+
       font-weight: bold;
+
       color: #fff;
+
     }
 
     tr:hover {
+
       background-color: #f5f5f5;
+
       transform: scale(1.01);
+
     }
 
     tr:nth-child(even) td {
+
       background-color: #f9f9f9;
+
     }
 
     .color-box {
+
       width: 50px;
+
       height: 25px;
+
       margin: 0 auto;
+
       border-radius: 4px;
+
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
     }
 
     @media (max-width: 768px) {
+
+      .table-container {
+
+        padding: 15px;
+
+      }
+
       th, td {
+
         font-size: 0.9rem;
+
         padding: 10px;
+
       }
 
       .color-box {
+
         width: 40px;
+
         height: 20px;
+
       }
+
     }
 
     @media (max-width: 480px) {
-      h1 {
+
+      .title-container h1 {
+
         font-size: 1.5rem;
-        margin: 15px 0;
+
       }
 
       th, td {
+
         font-size: 0.8rem;
+
         padding: 8px;
+
       }
 
       .color-box {
+
         width: 30px;
+
         height: 15px;
+
       }
+
     }
+
   </style>
+
 </head>
+
 <body>
-  <h1>Bảng tên màu CSS</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Tên màu</th>
-        <th>#Hex</th>
-        <th>rgb(r, g, b)</th>
-        <th>Thể hiện</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>black</td>
-        <td>#000000</td>
-        <td>rgb(0, 0, 0)</td>
-        <td><div class="color-box" style="background-color: #000000;"></div></td>
-      </tr>
-      <tr>
-        <td>silver</td>
-        <td>#C0C0C0</td>
-        <td>rgb(192, 192, 192)</td>
-        <td><div class="color-box" style="background-color: #C0C0C0;"></div></td>
-      </tr>
-      <tr>
-        <td>white</td>
-        <td>#FFFFFF</td>
-        <td>rgb(255, 255, 255)</td>
-        <td><div class="color-box" style="background-color: #FFFFFF; border: 1px solid #ccc;"></div></td>
-      </tr>
-      <tr>
-        <td>maroon</td>
-        <td>#800000</td>
-        <td>rgb(128, 0, 0)</td>
-        <td><div class="color-box" style="background-color: #800000;"></div></td>
-      </tr>
-      <tr>
-        <td>red</td>
-        <td>#FF0000</td>
-        <td>rgb(255, 0, 0)</td>
-        <td><div class="color-box" style="background-color: #FF0000;"></div></td>
-      </tr>
-      <tr>
-        <td>purple</td>
-        <td>#800080</td>
-        <td>rgb(128, 0, 128)</td>
-        <td><div class="color-box" style="background-color: #800080;"></div></td>
-      </tr>
-      <tr>
-        <td>fuchsia</td>
-        <td>#FF00FF</td>
-        <td>rgb(255, 0, 255)</td>
-        <td><div class="color-box" style="background-color: #FF00FF;"></div></td>
-      </tr>
-      <tr>
-        <td>green</td>
-        <td>#008000</td>
-        <td>rgb(0, 128, 0)</td>
-        <td><div class="color-box" style="background-color: #008000;"></div></td>
-      </tr>
-      <tr>
-        <td>lime</td>
-        <td>#00FF00</td>
-        <td>rgb(0, 255, 0)</td>
-        <td><div class="color-box" style="background-color: #00FF00;"></div></td>
-      </tr>
-      <tr>
-        <td>yellow</td>
-        <td>#FFFF00</td>
-        <td>rgb(255, 255, 0)</td>
-        <td><div class="color-box" style="background-color: #FFFF00;"></div></td>
-      </tr>
-      <tr>
-        <td>blue</td>
-        <td>#0000FF</td>
-        <td>rgb(0, 0, 255)</td>
-        <td><div class="color-box" style="background-color: #0000FF;"></div></td>
-      </tr>
-      <tr>
-        <td>teal</td>
-        <td>#008080</td>
-        <td>rgb(0, 128, 128)</td>
-        <td><div class="color-box" style="background-color: #008080;"></div></td>
-      </tr>
-      <tr>
-        <td>aqua</td>
-        <td>#00FFFF</td>
-        <td>rgb(0, 255, 255)</td>
-        <td><div class="color-box" style="background-color: #00FFFF;"></div></td>
-      </tr>
-      <tr>
-        <td>orange</td>
-        <td>#FFA500</td>
-        <td>rgb(255, 165, 0)</td>
-        <td><div class="color-box" style="background-color: #FFA500;"></div></td>
-      </tr>
-    </tbody>
-  </table>
+
+  <div class="title-container">
+
+    <h1>Bảng tên màu CSS</h1>
+
+  </div>
+
+  <div class="table-container">
+
+    <table>
+
+      <thead>
+
+        <tr>
+
+          <th>Tên màu</th>
+
+          <th>#Hex</th>
+
+          <th>rgb(r, g, b)</th>
+
+          <th>Thể hiện</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <td>black</td>
+
+          <td>#000000</td>
+
+          <td>rgb(0, 0, 0)</td>
+
+          <td><div class="color-box" style="background-color: #000000;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>silver</td>
+
+          <td>#C0C0C0</td>
+
+          <td>rgb(192, 192, 192)</td>
+
+          <td><div class="color-box" style="background-color: #C0C0C0;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>white</td>
+
+          <td>#FFFFFF</td>
+
+          <td>rgb(255, 255, 255)</td>
+
+          <td><div class="color-box" style="background-color: #FFFFFF; border: 1px solid #ccc;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>maroon</td>
+
+          <td>#800000</td>
+
+          <td>rgb(128, 0, 0)</td>
+
+          <td><div class="color-box" style="background-color: #800000;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>red</td>
+
+          <td>#FF0000</td>
+
+          <td>rgb(255, 0, 0)</td>
+
+          <td><div class="color-box" style="background-color: #FF0000;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>purple</td>
+
+          <td>#800080</td>
+
+          <td>rgb(128, 0, 128)</td>
+
+          <td><div class="color-box" style="background-color: #800080;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>fuchsia</td>
+
+          <td>#FF00FF</td>
+
+          <td>rgb(255, 0, 255)</td>
+
+          <td><div class="color-box" style="background-color: #FF00FF;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>green</td>
+
+          <td>#008000</td>
+
+          <td>rgb(0, 128, 0)</td>
+
+          <td><div class="color-box" style="background-color: #008000;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>lime</td>
+
+          <td>#00FF00</td>
+
+          <td>rgb(0, 255, 0)</td>
+
+          <td><div class="color-box" style="background-color: #00FF00;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>yellow</td>
+
+          <td>#FFFF00</td>
+
+          <td>rgb(255, 255, 0)</td>
+
+          <td><div class="color-box" style="background-color: #FFFF00;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>blue</td>
+
+          <td>#0000FF</td>
+
+          <td>rgb(0, 0, 255)</td>
+
+          <td><div class="color-box" style="background-color: #0000FF;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>teal</td>
+
+          <td>#008080</td>
+
+          <td>rgb(0, 128, 128)</td>
+
+          <td><div class="color-box" style="background-color: #008080;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>aqua</td>
+
+          <td>#00FFFF</td>
+
+          <td>rgb(0, 255, 255)</td>
+
+          <td><div class="color-box" style="background-color: #00FFFF;"></div></td>
+
+        </tr>
+
+        <tr>
+
+          <td>orange</td>
+
+          <td>#FFA500</td>
+
+          <td>rgb(255, 165, 0)</td>
+
+          <td><div class="color-box" style="background-color: #FFA500;"></div></td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
 </body>
-          </html>
+
+</html>
+
