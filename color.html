@@ -1,240 +1,104 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bảng tên màu CSS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thông báo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #f4f4f9, #e8ecfc);
-      color: #333;
       margin: 0;
       padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #121212, #1f1f1f);
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    .title-container {
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-      margin: 20px 0;
-      padding: 15px 20px;
-      border: 2px solid #6c63ff;
-      border-radius: 12px;
-      background-color: #fff;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-      color: #4a4a4a;
-      max-width: 90%;
-    }
-
-    .title-container h1 {
-      font-size: 2rem;
-      margin: 0;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .table-container {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: auto;
-      margin: 20px auto;
       padding: 20px;
-      border: 3px solid #6c63ff;
-      border-radius: 12px;
-      background-color: #fff;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 10px 0;
-      background-color: #fff;
-      border-radius: 12px;
+    h1 {
+      font-size: 2.2em;
+      color: #ff5c5c;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 0.95em;
+      color: #cccccc;
+      max-width: 480px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .qr {
+      margin: 30px 0;
+    }
+
+    .qr img {
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 92, 92, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .qr img:hover {
+      transform: scale(1.05);
+    }
+
+    .progress-container {
+      width: 85%;
+      max-width: 480px;
+      background-color: #2b2b2b;
+      border-radius: 25px;
       overflow: hidden;
-      table-layout: fixed;
+      margin-top: 30px;
+      box-shadow: 0 0 8px rgba(255, 92, 92, 0.3);
     }
 
-    th, td {
-      padding: 15px;
-      text-align: center;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      border: 1px solid #ddd;
-      word-wrap: break-word;
+    .progress-bar {
+      height: 24px;
+      width: 15%;
+      background: linear-gradient(to right, #ff5c5c, #ffa07a);
+      transition: width 0.5s;
     }
 
-    th {
-      background-color: #6c63ff;
-      color: #fff;
-      font-weight: bold;
+    .percent {
+      font-size: 0.9em;
+      margin-top: 10px;
+      color: #ffaaaa;
+      font-weight: 500;
     }
 
-    td {
-      background-color: #fafafa;
-    }
-
-    td:last-child {
-      font-weight: bold;
-      color: #fff;
-    }
-
-    tr:hover {
-      background-color: #f5f5f5;
-      transform: scale(1.01);
-    }
-
-    tr:nth-child(even) td {
-      background-color: #f9f9f9;
-    }
-
-    .color-box {
-      width: 50px;
-      height: 25px;
-      margin: 0 auto;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    @media (max-width: 768px) {
-      .table-container {
-        padding: 15px;
-      }
-
-      th, td {
-        font-size: 0.9rem;
-        padding: 10px;
-      }
-
-      .color-box {
-        width: 40px;
-        height: 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .title-container h1 {
-        font-size: 1.5rem;
-      }
-
-      th, td {
-        font-size: 0.8rem;
-        padding: 8px;
-      }
-
-      .color-box {
-        width: 30px;
-        height: 15px;
-      }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.85em;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <div class="title-container">
-    <h1>Bảng tên màu CSS</h1>
+  <h1>Thông Báo</h1>
+  <p>Chào mọi người, trang web của mình sẽ đóng do thiếu kinh phí duy trì, tương lai sẽ mở trở lại khi nhận được sự ủng hộ của mọi người, cảm ơn mọi người đã đồng hành trong suốt thời gian vừa qua.<br/>
+  Nếu thấy trang web hữu ít hãy ủng hộ để nó sống tiếp.</p>
+
+  <div class="qr">
+    <p><strong>Ủng hộ qua QR:</strong></p>
+    <img src="https://i.imgur.com/MypinHe.jpeg" alt="QR Code"/>
   </div>
-  <div class="table-container">
-    <table>
-      <thead>
-        <tr>
-          <th>Tên màu</th>
-          <th>#Hex</th>
-          <th>rgb(r, g, b)</th>
-          <th>Thể hiện</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>black</td>
-          <td>#000000</td>
-          <td>rgb(0, 0, 0)</td>
-          <td><div class="color-box" style="background-color: #000000;"></div></td>
-        </tr>
-        <tr>
-          <td>silver</td>
-          <td>#C0C0C0</td>
-          <td>rgb(192, 192, 192)</td>
-          <td><div class="color-box" style="background-color: #C0C0C0;"></div></td>
-        </tr>
-        <tr>
-          <td>white</td>
-          <td>#FFFFFF</td>
-          <td>rgb(255, 255, 255)</td>
-          <td><div class="color-box" style="background-color: #FFFFFF; border: 1px solid #ccc;"></div></td>
-        </tr>
-        <tr>
-          <td>maroon</td>
-          <td>#800000</td>
-          <td>rgb(128, 0, 0)</td>
-          <td><div class="color-box" style="background-color: #800000;"></div></td>
-        </tr>
-        <tr>
-          <td>red</td>
-          <td>#FF0000</td>
-          <td>rgb(255, 0, 0)</td>
-          <td><div class="color-box" style="background-color: #FF0000;"></div></td>
-        </tr>
-        <tr>
-          <td>purple</td>
-          <td>#800080</td>
-          <td>rgb(128, 0, 128)</td>
-          <td><div class="color-box" style="background-color: #800080;"></div></td>
-        </tr>
-        <tr>
-          <td>fuchsia</td>
-          <td>#FF00FF</td>
-          <td>rgb(255, 0, 255)</td>
-          <td><div class="color-box" style="background-color: #FF00FF;"></div></td>
-        </tr>
-        <tr>
-          <td>green</td>
-          <td>#008000</td>
-          <td>rgb(0, 128, 0)</td>
-          <td><div class="color-box" style="background-color: #008000;"></div></td>
-        </tr>
-        <tr>
-          <td>lime</td>
-          <td>#00FF00</td>
-          <td>rgb(0, 255, 0)</td>
-          <td><div class="color-box" style="background-color: #00FF00;"></div></td>
-        </tr>
-        <tr>
-          <td>yellow</td>
-          <td>#FFFF00</td>
-          <td>rgb(255, 255, 0)</td>
-          <td><div class="color-box" style="background-color: #FFFF00;"></div></td>
-        </tr>
-        <tr>
-          <td>blue</td>
-          <td>#0000FF</td>
-          <td>rgb(0, 0, 255)</td>
-          <td><div class="color-box" style="background-color: #0000FF;"></div></td>
-        </tr>
-        <tr>
-          <td>teal</td>
-          <td>#008080</td>
-          <td>rgb(0, 128, 128)</td>
-          <td><div class="color-box" style="background-color: #008080;"></div></td>
-        </tr>
-        <tr>
-          <td>aqua</td>
-          <td>#00FFFF</td>
-          <td>rgb(0, 255, 255)</td>
-          <td><div class="color-box" style="background-color: #00FFFF;"></div></td>
-        </tr>
-        <tr>
-          <td>orange</td>
-          <td>#FFA500</td>
-          <td>rgb(255, 165, 0)</td>
-          <td><div class="color-box" style="background-color: #FFA500;"></div></td>
-        </tr>
-      </tbody>
-    </table>
+
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
+  <div class="percent">Tiến độ: 15%</div>
+
+  <div class="footer">
+    Cảm ơn rất nhìuuuuu.
   </div>
 </body>
 </html>
